@@ -18,10 +18,15 @@ days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sun
 layout = [
     [sg.Text('Enter the results of your study period:')],
     [sg.Text("Date", size=(15,1)), sg.InputText(date, key="Date", size=(15,1))],
-    [sg.Text("Time", size=(15,1)), sg.InputText(time, key="Time", size=(15,1))],
+    [sg.Text("Time", size=(15,1)), sg.InputText(time, key="End git sTime", size=(15,1))],
     [sg.Text('Weekday', size=(15,1)), sg.Combo(days, default_value= day, key='Weekday', size=(15,1))],
     [sg.Text('Study Time (hrs)', size=(15,1)), sg.InputText(key='Study Hours', size=(15,1))],
-    [sg.Text('Activity', size=(15,1)), sg.InputText(key='Activity', size=(15,1))],
+    [sg.Text('Activity', size=(15,1)),
+        sg.Checkbox('Coding', key='Coding'),
+        sg.Checkbox('Courses', key='Courses'),
+        sg.Checkbox('Videos', key='Videos'),
+        sg.Checkbox('Reading', key='Reading'),
+        sg.Checkbox('Other', key='Other')],
     [sg.Text('Productivity Rating', size=(15,1)), sg.Combo(['5', '4', '3', '2', '1'], key='Rating', size=(15,1))],
     [sg.Submit(), sg.Button('Clear'), sg.Exit()]
 ]
