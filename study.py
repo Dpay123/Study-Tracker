@@ -2,6 +2,8 @@ from turtle import left
 import PySimpleGUI as sg
 import pandas as pd
 import datetime
+from random import choice
+from topics import topics, vscode
 
 # add some color
 sg.theme('DarkAmber')
@@ -35,19 +37,19 @@ col1 = [
     [sg.Submit(), sg.Button('Clear'), sg.Exit()]
 ]
 
-frame1 = [sg.Text('Frame 1')]
-frame2 = [sg.Text('Frame 2')]
-
-col2 = [[sg.Text('Column 2')], frame1, frame2]
+col2 = [
+    [sg.Text('Column 2')],
+    [sg.Text('Today\'s Topic:'), sg.Text(choice(topics), size=(15,1), key="topic"), sg.Button('Reset')]
+]
 
 layout = [
     [sg.Column(col1),
     sg.VSeperator(),
-    sg.Column(col2, element_justification='c')]
+    sg.Column(col2)]
 ]
 
 # pass to window
-window = sg.Window('Study Tracker', layout, size=(500,300))
+window = sg.Window('Study Tracker', layout, size=(600,300))
 
 def clear_input():
     for key in values:
@@ -66,5 +68,7 @@ while True:
         df.to_excel(EXCEL_FILE, index=False)
         sg.popup('Data saved')
         clear_input()
+    if event == 'Reset':
+        window.Element('topic').update(choice(topics))
 window.close()
 
