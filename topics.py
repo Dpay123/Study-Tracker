@@ -7,7 +7,7 @@ topics = [
 ]
 
 vscode = [
-    "Ctrl + / :comment out code line (or highlight)",
-    "Ctrl + Enter :add newline below current line without breaking line",
-    "Ctrl + p :search for file by name instead of using Explorer",
+    ["Ctrl + /","Comment out code line (or highlighted section)"],
+    ["Ctrl + Enter","Add newline below current line without breaking line"],
+    ["Ctrl + p","Search for file by name instead of using Explorer"],
 ]
