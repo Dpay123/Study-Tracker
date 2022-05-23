@@ -4,13 +4,13 @@ import pandas as pd
 import datetime
 from random import choice
 from topics import topics, vscode
-
 # add some color
 sg.theme('DarkAmber')
 
 # path to excel
 EXCEL_FILE = 'study.xlsx'
 df = pd.read_excel(EXCEL_FILE)
+
 
 get_date = datetime.datetime.now()
 date = get_date.strftime("%x")

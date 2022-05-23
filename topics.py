@@ -1,9 +1,9 @@
 
 topics = [
-    "Hash Tables", "POST vs GET", "B-Trees (SQL)", "SQL Macros",
-    "Excel Automation", "Linked Lists", "VSCode Features", 
-    "shortcutfoo.com", "debugging", "Python Automation",
-    "DSA", 
+    "Hash Tables", "POST vs GET", "B-Trees (SQL)",
+    "Database Security", "Linked Lists", "VSCode Features", 
+    "shortcutfoo.com", "unit testing", "Normalization",
+    "Agile", "Scrum",  
 ]
 
 vscode = [
